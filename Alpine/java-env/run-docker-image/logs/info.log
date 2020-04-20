@@ -1,0 +1,255 @@
+[13:51:31:733] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[13:51:31:768] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[13:51:31:769] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[13:51:32:057] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[13:51:32:060] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[13:51:32:065] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[13:51:32:707] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[13:51:32:905] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[13:51:32:919] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[13:51:32:921] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[13:51:32:923] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[13:51:32:930] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[13:51:37:548] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[13:51:37:564] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[13:51:37:564] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[13:51:37:847] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[13:51:37:850] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[13:51:37:855] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[13:51:38:477] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[13:51:38:687] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[13:51:38:704] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[13:51:38:705] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[13:51:38:707] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[13:51:38:715] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[13:51:39:081] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:156) - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[13:51:39:690] [INFO] - org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation(LobCreatorBuilderImpl.java:124) - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[13:51:39:698] [INFO] - org.hibernate.type.BasicTypeRegistry.register(BasicTypeRegistry.java:138) - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@45312be2
+[13:51:41:450] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27) - HV000001: Hibernate Validator 5.0.1.Final
+[13:51:45:083] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimclientdevice
+[13:51:45:138] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_deployfile_status
+[13:51:45:170] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_exec_status
+[13:51:45:216] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_extend_status
+[13:51:45:250] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_install_status
+[13:51:45:282] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_upgrade_status
+[13:51:45:314] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevicegroup
+[13:51:45:345] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimeventmsg
+[13:51:45:376] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimsolutionapp
+[13:51:45:409] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimuser
+[13:51:45:442] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder
+[13:51:45:475] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_item
+[13:51:45:511] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_status
+[13:51:45:959] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[13:51:45:965] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[13:51:46:589] [INFO] - org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+[13:51:46:824] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 67 in HQL: [select d from com.advantech.mdm.dbmger.entity.User d where d.name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:51:47:584] [INFO] - leshan.standalone.LeshanStandalone.initDB(LeshanStandalone.java:184) - initDB Finished
+[13:51:47:628] [INFO] - leshan.standalone.LeshanStandalone.verifyLicense(LeshanStandalone.java:240) - authCode=null
+[13:51:47:629] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:132) - authcode verify fail!
+[13:51:47:634] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:144) - no license found!
+[13:51:47:673] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource rd under root
+[13:51:47:697] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource dpstus under root
+[13:51:47:701] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource report under root
+[13:51:47:706] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource hb under root
+[13:51:47:709] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1290) - hbMaintainMapLength=0
+[13:51:47:750] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 79 in HQL: [select d from com.advantech.mdm.dbmger.entity.ClientDevice d where d.isOnline=? order by d.registrationDate desc].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:51:47:773] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1355) - APP_INST_THREADS=50
+[13:51:47:774] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1356) - BSP_INST_THREADS=30
+[13:51:47:774] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1357) - WD_INST_THREADS=50
+[13:51:47:775] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1358) - WD_INST_QUEUE=3000
+[13:51:47:775] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1359) - APP_INST_QUEUE=3000
+[13:51:47:776] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1360) - BSP_INST_QUEUE=3000
+[13:51:47:776] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1361) - EXEC_INST_THREADS=50
+[13:51:47:777] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1362) - EXEC_INST_QUEUE=5000
+[13:51:47:778] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1363) - FILE_INST_THREADS=50
+[13:51:47:778] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1364) - FILE_INST_QUEUE=3000
+[13:51:47:779] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1365) - SOLUTION_APP_THREADS=30
+[13:51:47:780] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1366) - SOLUTION_APP_QUEUE=3000
+[13:51:47:781] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1409) - path = /root/adv/models
+[13:51:49:617] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:66) - jinxin:jinxin
+[13:51:49:619] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:76) - Connecting endpoint 56783 to broker: tcp://m2m_mosquitto:1883
+[13:51:49:999] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:78) - Connected
+[13:51:50:008] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.subscribe(MQTTWrapper.java:115) - Subscribe to :: LWM/+/+/56783/leshan-server/#
+[13:51:50:025] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1436) - LW-M2M server started
+[13:51:50:051] [INFO] - leshan.standalone.LeshanStandalone.startJettyServer(LeshanStandalone.java:299) - appType is /root/adv/androidDM
+[13:51:50:098] [INFO] - org.eclipse.jetty.util.log.Log.initialized(Log.java:180) - Logging initialized @14698ms
+[13:51:51:222] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:301) - jetty-9.1.z-SNAPSHOT
+[13:51:51:468] [INFO] - org.eclipse.jetty.webapp.StandardDescriptorProcessor.visitServlet(StandardDescriptorProcessor.java:296) - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+[13:51:51:658] [INFO] - org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:747) - Started o.e.j.w.WebAppContext@23382f76{/,file:/root/adv/androidDM/,AVAILABLE}
+[13:51:51:714] [INFO] - org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:266) - Started ServerConnector@62891fc8{HTTP/1.1}{0.0.0.0:8080}
+[13:51:51:718] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:350) - Started @16341ms
+[13:54:15:408] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 89 in HQL: [select count(*) from com.advantech.mdm.dbmger.entity.ClientDevice as d where d.isOnline=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:54:15:487] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[13:54:15:500] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}
+[13:54:17:604] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[13:54:17:606] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}
+[13:57:26:069] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[13:57:26:084] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[13:57:26:085] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[13:57:26:405] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[13:57:26:409] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[13:57:26:413] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[13:57:27:016] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[13:57:27:207] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[13:57:27:222] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[13:57:27:224] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[13:57:27:225] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[13:57:27:233] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[13:57:31:814] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[13:57:31:829] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[13:57:31:830] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[13:57:32:116] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[13:57:32:120] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[13:57:32:124] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[13:57:32:741] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[13:57:32:941] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[13:57:32:956] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[13:57:32:958] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[13:57:32:959] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[13:57:32:966] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[13:57:33:320] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:156) - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[13:57:33:902] [INFO] - org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation(LobCreatorBuilderImpl.java:124) - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[13:57:33:909] [INFO] - org.hibernate.type.BasicTypeRegistry.register(BasicTypeRegistry.java:138) - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@45312be2
+[13:57:35:614] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27) - HV000001: Hibernate Validator 5.0.1.Final
+[13:57:39:487] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimclientdevice
+[13:57:39:548] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_deployfile_status
+[13:57:39:582] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_exec_status
+[13:57:39:619] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_extend_status
+[13:57:39:652] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_install_status
+[13:57:39:686] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_upgrade_status
+[13:57:39:720] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevicegroup
+[13:57:39:753] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimeventmsg
+[13:57:39:786] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimsolutionapp
+[13:57:39:821] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimuser
+[13:57:39:863] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder
+[13:57:39:899] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_item
+[13:57:39:933] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_status
+[13:57:40:385] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[13:57:40:392] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[13:57:41:032] [INFO] - org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+[13:57:41:293] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 67 in HQL: [select d from com.advantech.mdm.dbmger.entity.User d where d.name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:57:41:977] [INFO] - leshan.standalone.LeshanStandalone.initDB(LeshanStandalone.java:184) - initDB Finished
+[13:57:42:028] [INFO] - leshan.standalone.LeshanStandalone.verifyLicense(LeshanStandalone.java:240) - authCode=null
+[13:57:42:029] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:132) - authcode verify fail!
+[13:57:42:029] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:144) - no license found!
+[13:57:42:063] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource rd under root
+[13:57:42:069] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource dpstus under root
+[13:57:42:073] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource report under root
+[13:57:42:075] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource hb under root
+[13:57:42:077] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1290) - hbMaintainMapLength=0
+[13:57:42:094] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 79 in HQL: [select d from com.advantech.mdm.dbmger.entity.ClientDevice d where d.isOnline=? order by d.registrationDate desc].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:57:42:132] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1355) - APP_INST_THREADS=50
+[13:57:42:132] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1356) - BSP_INST_THREADS=30
+[13:57:42:133] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1357) - WD_INST_THREADS=50
+[13:57:42:133] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1358) - WD_INST_QUEUE=3000
+[13:57:42:133] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1359) - APP_INST_QUEUE=3000
+[13:57:42:134] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1360) - BSP_INST_QUEUE=3000
+[13:57:42:134] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1361) - EXEC_INST_THREADS=50
+[13:57:42:141] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1362) - EXEC_INST_QUEUE=5000
+[13:57:42:141] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1363) - FILE_INST_THREADS=50
+[13:57:42:142] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1364) - FILE_INST_QUEUE=3000
+[13:57:42:142] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1365) - SOLUTION_APP_THREADS=30
+[13:57:42:142] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1366) - SOLUTION_APP_QUEUE=3000
+[13:57:42:145] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1409) - path = /root/adv/models
+[13:57:43:920] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:66) - jinxin:jinxin
+[13:57:43:921] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:76) - Connecting endpoint 56783 to broker: tcp://m2m_mosquitto:1883
+[13:57:44:380] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:78) - Connected
+[13:57:44:384] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.subscribe(MQTTWrapper.java:115) - Subscribe to :: LWM/+/+/56783/leshan-server/#
+[13:57:44:444] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1436) - LW-M2M server started
+[13:57:44:470] [INFO] - leshan.standalone.LeshanStandalone.startJettyServer(LeshanStandalone.java:299) - appType is /root/adv/androidDM
+[13:57:44:497] [INFO] - org.eclipse.jetty.util.log.Log.initialized(Log.java:180) - Logging initialized @14820ms
+[13:57:46:167] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:301) - jetty-9.1.z-SNAPSHOT
+[13:57:46:513] [INFO] - org.eclipse.jetty.webapp.StandardDescriptorProcessor.visitServlet(StandardDescriptorProcessor.java:296) - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+[13:57:46:650] [INFO] - org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:747) - Started o.e.j.w.WebAppContext@23382f76{/,file:/root/adv/androidDM/,AVAILABLE}
+[13:57:46:700] [INFO] - org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:266) - Started ServerConnector@62891fc8{HTTP/1.1}{0.0.0.0:8080}
+[13:57:46:712] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:350) - Started @17045ms
+[13:58:13:496] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 89 in HQL: [select count(*) from com.advantech.mdm.dbmger.entity.ClientDevice as d where d.isOnline=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[13:58:13:603] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[13:58:13:610] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}
+[13:58:15:408] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[13:58:15:410] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}
+[14:02:14:662] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[14:02:14:678] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[14:02:14:679] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[14:02:14:976] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[14:02:14:980] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[14:02:14:985] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[14:02:15:675] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[14:02:15:930] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[14:02:15:947] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[14:02:15:949] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[14:02:15:951] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[14:02:15:959] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[14:02:21:996] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:195) - build time: 2020-04-08T10:35:01+0800
+[14:02:22:012] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:196) - commit id: 3a75d0ae72a6cdfbb35f0275287ea47e73ba5011
+[14:02:22:013] [INFO] - leshan.standalone.LeshanStandalone.printfVersion(LeshanStandalone.java:197) - build version: 1.0.0-ADV
+[14:02:22:377] [INFO] - org.hibernate.Version.logVersion(Version.java:37) - HHH000412: Hibernate Core {5.1.0.Final}
+[14:02:22:381] [INFO] - org.hibernate.cfg.Environment.<clinit>(Environment.java:213) - HHH000206: hibernate.properties not found
+[14:02:22:385] [INFO] - org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) - HHH000021: Bytecode provider name : javassist
+[14:02:23:300] [INFO] - org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[14:02:23:533] [WARN] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[14:02:23:550] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://m2m-postgresSQL:5432/aimlink]
+[14:02:23:551] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) - HHH10001001: Connection properties: {user=postgres, password=postgres, release_mode=after_transaction}
+[14:02:23:553] [INFO] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) - HHH10001003: Autocommit mode: false
+[14:02:23:560] [INFO] - org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[14:02:24:010] [INFO] - org.hibernate.dialect.Dialect.<init>(Dialect.java:156) - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[14:02:24:637] [INFO] - org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation(LobCreatorBuilderImpl.java:124) - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[14:02:24:652] [INFO] - org.hibernate.type.BasicTypeRegistry.register(BasicTypeRegistry.java:138) - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@45312be2
+[14:02:26:435] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27) - HV000001: Hibernate Validator 5.0.1.Final
+[14:02:29:957] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimclientdevice
+[14:02:29:997] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_deployfile_status
+[14:02:30:030] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_exec_status
+[14:02:30:077] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_extend_status
+[14:02:30:111] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_install_status
+[14:02:30:143] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevice_upgrade_status
+[14:02:30:176] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimdevicegroup
+[14:02:30:207] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimeventmsg
+[14:02:30:239] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimsolutionapp
+[14:02:30:271] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimuser
+[14:02:30:305] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder
+[14:02:30:339] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_item
+[14:02:30:371] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: aimworkorder_status
+[14:02:30:801] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[14:02:30:807] [INFO] - org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processGetTableResults(InformationExtractorJdbcDatabaseMetaDataImpl.java:365) - HHH000262: Table not found: device_group_relationship
+[14:02:31:402] [INFO] - org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+[14:02:31:653] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 67 in HQL: [select d from com.advantech.mdm.dbmger.entity.User d where d.name=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[14:02:32:185] [INFO] - leshan.standalone.LeshanStandalone.initDB(LeshanStandalone.java:184) - initDB Finished
+[14:02:32:219] [INFO] - leshan.standalone.LeshanStandalone.verifyLicense(LeshanStandalone.java:240) - authCode=null
+[14:02:32:224] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:132) - authcode verify fail!
+[14:02:32:225] [INFO] - leshan.standalone.LeshanStandalone.startMQTTServer(LeshanStandalone.java:144) - no license found!
+[14:02:32:274] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource rd under root
+[14:02:32:287] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource dpstus under root
+[14:02:32:291] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource report under root
+[14:02:32:293] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.add(MQTTWrapper.java:164) - adding resource hb under root
+[14:02:32:295] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1290) - hbMaintainMapLength=0
+[14:02:32:330] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 79 in HQL: [select d from com.advantech.mdm.dbmger.entity.ClientDevice d where d.isOnline=? order by d.registrationDate desc].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[14:02:32:387] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1355) - APP_INST_THREADS=50
+[14:02:32:388] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1356) - BSP_INST_THREADS=30
+[14:02:32:388] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1357) - WD_INST_THREADS=50
+[14:02:32:389] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1358) - WD_INST_QUEUE=3000
+[14:02:32:389] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1359) - APP_INST_QUEUE=3000
+[14:02:32:389] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1360) - BSP_INST_QUEUE=3000
+[14:02:32:390] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1361) - EXEC_INST_THREADS=50
+[14:02:32:390] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1362) - EXEC_INST_QUEUE=5000
+[14:02:32:391] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1363) - FILE_INST_THREADS=50
+[14:02:32:391] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1364) - FILE_INST_QUEUE=3000
+[14:02:32:392] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1365) - SOLUTION_APP_THREADS=30
+[14:02:32:392] [INFO] - leshan.server.mqtt.LeshanServer.<init>(LeshanServer.java:1366) - SOLUTION_APP_QUEUE=3000
+[14:02:32:393] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1409) - path = /root/adv/models
+[14:02:33:915] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:66) - jinxin:jinxin
+[14:02:33:916] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:76) - Connecting endpoint 56783 to broker: tcp://m2m_mosquitto:1883
+[14:02:34:287] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.start(MQTTWrapper.java:78) - Connected
+[14:02:34:291] [INFO] - com.ibm.mqttv3.binding.MQTTWrapper.subscribe(MQTTWrapper.java:115) - Subscribe to :: LWM/+/+/56783/leshan-server/#
+[14:02:34:303] [INFO] - leshan.server.mqtt.LeshanServer.start(LeshanServer.java:1436) - LW-M2M server started
+[14:02:34:363] [INFO] - leshan.standalone.LeshanStandalone.startJettyServer(LeshanStandalone.java:299) - appType is /root/adv/androidDM
+[14:02:34:398] [INFO] - org.eclipse.jetty.util.log.Log.initialized(Log.java:180) - Logging initialized @15331ms
+[14:02:35:372] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:301) - jetty-9.1.z-SNAPSHOT
+[14:02:35:746] [INFO] - org.eclipse.jetty.webapp.StandardDescriptorProcessor.visitServlet(StandardDescriptorProcessor.java:296) - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+[14:02:35:880] [INFO] - org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:747) - Started o.e.j.w.WebAppContext@23382f76{/,file:/root/adv/androidDM/,AVAILABLE}
+[14:02:35:925] [INFO] - org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:266) - Started ServerConnector@62891fc8{HTTP/1.1}{0.0.0.0:8080}
+[14:02:35:926] [INFO] - org.eclipse.jetty.server.Server.doStart(Server.java:350) - Started @16875ms
+[14:03:17:370] [WARN] - org.hibernate.hql.internal.ast.HqlSqlWalker.generatePositionalParameter(HqlSqlWalker.java:1063) - [DEPRECATION] Encountered positional parameter near line 1, column 89 in HQL: [select count(*) from com.advantech.mdm.dbmger.entity.ClientDevice as d where d.isOnline=?].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[14:03:17:430] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[14:03:17:483] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}
+[14:03:19:992] [INFO] - org.eclipse.leshan.standalone.servlet.ConfigServlet.get_1_getQRCodeData(ConfigServlet.java:71) - ip:172.21.73.88
+[14:03:19:994] [INFO] - org.eclipse.leshan.standalone.utils.RASUtil.encrypt(RASUtil.java:27) - encryotJson:{"services":[{"name":"mqtt","ip":"172.21.73.88"}]}

@@ -1,0 +1,75 @@
+version: '2'
+services:
+     androidlink: 
+        build: 
+             context: ./java-env/build-docker-image/
+             dockerfile: Dockerfile
+        image: java8env
+        restart: always
+        depends_on:
+                - mqtt
+                - db
+        volumes:
+                - ./java-env/run-docker-image/vnctoken:/root/adv/vnctoken 
+                - ./java-env/run-docker-image/logs:/root/logs
+                - /sys:/sys
+        ports: 
+                - "8080:8080"
+        command: /root/adv/run.sh
+        container_name: m2mserver
+        links:
+                - "mqtt"
+                - "db"
+        networks: 
+                - advnet
+        environment: 
+                - TZ=Asia/Shanghai
+     mqtt:
+        build: 
+             context: ./mosquitto/
+             dockerfile: Dockerfile
+        image: m2m-mosquitto
+        restart: always
+        volumes:
+                - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+        ports: 
+                - "1883:1883"
+                - "11880:11880"
+        container_name: m2m_mosquitto
+        networks: 
+              - advnet
+     db:
+        image: postgres:9.4
+        restart: always
+        environment:
+                POSTGRES_PASSWORD: postgres
+                POSTGRES_DB: aimlink
+        ports:
+                - "5432:5432"
+        container_name: m2m-postgresSQL
+        networks: 
+              - advnet
+     astore:
+        build:
+             context: ./astore/build-docker-image/
+             dockerfile: Dockerfile  
+        image: aimlink-astore:v1.0
+        restart: always
+        depends_on:
+                - db
+        volumes:
+                - ./astore/run-docker-image/logs:/home/logs
+        ports:
+                - "30001:30019"
+                - "30002:80"
+        command: /root/adv/run.sh
+        container_name: aimlink_astore
+        links:
+                - "db"
+        networks: 
+                - advnet
+        environment: 
+                - TZ=Asia/Shanghai
+networks:
+    advnet:
+        driver: bridge

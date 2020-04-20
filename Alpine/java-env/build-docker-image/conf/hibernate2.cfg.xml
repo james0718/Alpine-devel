@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.connection.release_mode">after_transaction</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://m2m-postgresSQL:5432/aimlink</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.jdbc.batch_size">30</property>
+        <property name="hibernate.jdbc.fetch_size">50</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="com.advantech.mdm.dbmger.entity.DeviceGroup" />
+        <mapping class="com.advantech.mdm.dbmger.entity.ClientDevice" />
+        <mapping class="com.advantech.mdm.dbmger.entity.User" />
+        <mapping class="com.advantech.mdm.dbmger.entity.DeviceUpgradeStatus" />
+        <mapping class="com.advantech.mdm.dbmger.entity.DeviceInstallAppStatus" />
+        <mapping class="com.advantech.mdm.dbmger.entity.DeviceExecStatus" />
+        <mapping class="com.advantech.mdm.dbmger.entity.Workorder" />
+        <mapping class="com.advantech.mdm.dbmger.entity.WorkorderItem" />
+        <mapping class="com.advantech.mdm.dbmger.entity.WorkorderStatus" />
+	<mapping class="com.advantech.mdm.dbmger.entity.DeviceDeployFileStatus" />
+        <mapping class="com.advantech.mdm.dbmger.entity.SolutionApp" />
+        <mapping class="com.advantech.mdm.dbmger.entity.SolutionAppStatus" />
+	<mapping class="com.advantech.mdm.dbmger.entity.EventMsg" />
+    </session-factory>
+</hibernate-configuration>
