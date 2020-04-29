@@ -1,6 +1,3 @@
-get:
-	# Download the Apline project from Github
-	./run.sh
 run:
 	docker-compose -f Alpine/docker-compose.yml up -d --build
 
