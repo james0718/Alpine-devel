@@ -13,7 +13,7 @@ Run the Alpine docker image for AndroidDM
 # make
 
 # v1.1 version
- - New features
+# New features
   - add novnc and repeater
  - docker images version
   - androiddm-javaenv:v1.1
