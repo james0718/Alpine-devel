@@ -68,6 +68,23 @@ services:
                 - advnet
         environment: 
                 - TZ=Asia/Shanghai
+     novnc:
+        build:
+             context: ./noVnc/
+             dockerfile: Dockerfile
+        image: androiddm-novnc:v1.0
+        restart: always
+        volumes:
+                - ./java-env/run-docker-image/vnctoken/:/root/adv/vnctoken/
+                - ./noVnc/log/:/root/adv/log
+        ports:
+                - "9191:9191"
+                - "5901:5901"
+                - "5500:5500"
+        command: /root/adv/run.sh
+        container_name: m2m-novnc
+        networks: 
+                - advnet
 networks:
     advnet:
         driver: bridge

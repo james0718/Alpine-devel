@@ -1,0 +1,859 @@
+2020-04-30 11:21:05.478 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on 299940497c06 with PID 26 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 11:21:05.501 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 11:21:09.977 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 11:21:10.473 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 468ms. Found 6 repository interfaces.
+2020-04-30 11:21:13.924 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e61a6a78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:21:14.065 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$659ab7aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:21:17.210 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 11:21:17.369 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:21:17.489 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 11:21:17.496 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 11:21:17.600 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 11:21:17.947 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 11:21:17.948 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12129 ms
+2020-04-30 11:21:19.103 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 11:21:19.554 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 11:21:20.154 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 11:21:20.521 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 11:21:20.528 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 11:21:21.187 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 11:21:22.481 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 11:21:22.546 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 11:21:22.565 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6d5620ce
+2020-04-30 11:21:25.498 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 11:21:25.524 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 11:21:25.553 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 11:21:25.581 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 11:21:25.606 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 11:21:25.622 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 11:21:25.631 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 11:21:25.645 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 11:21:25.647 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 11:21:25.662 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 11:21:25.665 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 11:21:25.677 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 11:21:25.679 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 11:21:25.852 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 11:21:25.858 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 11:21:25.865 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 11:21:25.871 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 11:21:25.876 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 11:21:25.883 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 11:21:25.891 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 11:21:25.898 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 11:21:25.906 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 11:21:25.914 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 11:21:25.928 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 11:21:31.129 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 11:21:31.384 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 11:21:32.008 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 11:21:33.398 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:21:33.418 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 11:21:33.490 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 11:21:33.500 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 29.744 seconds (JVM running for 33.048)
+2020-04-30 11:21:33.599 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 11:21:34.128 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:21:34.150 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:21:34.249 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.250 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:21:34.304 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:21:34.410 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:21:34.412 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588216894253]
+2020-04-30 11:21:34.413 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 11:21:34.414 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 11:21:34.428 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.429 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:21:34.433 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:21:34.436 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:21:34.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588216894432]
+2020-04-30 11:21:34.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 11:21:34.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 11:21:34.442 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.443 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:21:34.447 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:21:34.450 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:21:34.451 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588216894445]
+2020-04-30 11:21:34.452 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 11:21:34.452 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 11:21:34.465 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:21:34.466 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:21:34.471 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:21:34.472 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:21:34.476 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.477 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:21:34.494 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:21:34.500 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:21:34.501 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 11:21:34.501 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 11:21:34.502 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:21:34.503 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 11:21:34.503 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588216894486]
+2020-04-30 11:21:34.504 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:21:34.504 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 11:21:34.519 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:21:34.520 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:21:34.524 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:21:34.525 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:21:34.530 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.531 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:21:34.535 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:21:34.539 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:21:34.539 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 11:21:34.540 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 11:21:34.540 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:21:34.541 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 11:21:34.541 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588216894534]
+2020-04-30 11:21:34.541 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:21:34.542 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 11:21:34.551 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:21:34.554 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:21:34.558 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:21:34.561 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:21:34.565 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:21:34.568 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:21:34.572 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:21:34.575 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:21:34.577 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 11:21:34.577 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 11:21:34.578 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:21:34.579 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 11:21:34.580 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588216894571]
+2020-04-30 11:21:34.581 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:21:34.582 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]
+2020-04-30 11:24:23.468 [http-nio-30019-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-30 11:24:23.471 [http-nio-30019-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-30 11:24:23.538 [http-nio-30019-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 66 ms
+2020-04-30 11:24:28.916 [http-nio-30019-exec-7] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:24:28.923 [http-nio-30019-exec-7] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:24:28.982 [http-nio-30019-exec-7] INFO  com.m2m.management.controller.LoginController - admin
+2020-04-30 11:24:30.491 [http-nio-30019-exec-9] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.filename like ? order by repoapp0_.ts desc limit ?
+2020-04-30 11:24:30.493 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame like ? order by repo0_.ts desc limit ?
+2020-04-30 11:24:30.504 [http-nio-30019-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 11:24:30.515 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 11:24:30.530 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 11:24:30.532 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2020-04-30 11:24:30.544 [http-nio-30019-exec-9] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repoapps repoapp0_
+2020-04-30 11:24:30.571 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_0_, user0_.name as name2_0_0_, user0_.passwd as passwd3_0_0_, user0_.ts as ts4_0_0_ from public.aimuser user0_ where user0_.uid=?
+2020-04-30 11:24:30.577 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 11:24:30.584 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 11:24:30.585 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2020-04-30 11:24:30.601 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 11:24:30.602 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 11:24:30.617 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repo repo0_
+2020-04-30 11:24:46.341 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.pkgname=? and repoapp0_.versionname=? and repoapp0_.filename=?
+2020-04-30 11:24:46.343 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 11:24:46.344 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 11:24:46.344 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 11:24:46.348 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.pkgname=? and repoapp0_.versionname=? and repoapp0_.filename=?
+2020-04-30 11:24:46.349 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 11:24:46.349 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 11:24:46.350 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 11:24:46.361 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_0_, repo0_.darkname as darkname2_1_0_, repo0_.description as descript3_1_0_, repo0_.reponame as reponame4_1_0_, repo0_.rtid as rtid6_1_0_, repo0_.ts as ts5_1_0_, repo0_.uid as uid7_1_0_, repotype1_.rtid as rtid1_5_1_, repotype1_.ts as ts2_5_1_, repotype1_.typename as typename3_5_1_, user2_.uid as uid1_0_2_, user2_.name as name2_0_2_, user2_.passwd as passwd3_0_2_, user2_.ts as ts4_0_2_ from public.repo repo0_ inner join public.repotype repotype1_ on repo0_.rtid=repotype1_.rtid inner join public.aimuser user2_ on repo0_.uid=user2_.uid where repo0_.rid=?
+2020-04-30 11:24:46.362 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 11:24:46.387 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select nextval ('repoapps_raid_seq')
+2020-04-30 11:24:46.392 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - insert into public.repoapps (address, description, filename, license, pkgname, rid, summary, ts, versioncode, versionname, websit, raid) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:24:46.394 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [/DEPLOYREPO/a8340e5fbd10aa7727195fb239c0a902/com.advantech.edgeoncode/0.7.e63c493.20190920]
+2020-04-30 11:24:46.394 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [546tdf3e]
+2020-04-30 11:24:46.395 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 11:24:46.396 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - []
+2020-04-30 11:24:46.396 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 11:24:46.397 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:24:46.398 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - []
+2020-04-30 11:24:46.398 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [8] as [BIGINT] - [1588217086379]
+2020-04-30 11:24:46.399 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [7]
+2020-04-30 11:24:46.399 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 11:24:46.400 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - []
+2020-04-30 11:24:46.400 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [12] as [BIGINT] - [1]
+2020-04-30 11:24:48.992 [http-nio-30019-exec-3] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.filename like ? order by repoapp0_.ts desc limit ?
+2020-04-30 11:24:48.994 [http-nio-30019-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 11:24:48.997 [http-nio-30019-exec-3] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_0_, repo0_.darkname as darkname2_1_0_, repo0_.description as descript3_1_0_, repo0_.reponame as reponame4_1_0_, repo0_.rtid as rtid6_1_0_, repo0_.ts as ts5_1_0_, repo0_.uid as uid7_1_0_, repotype1_.rtid as rtid1_5_1_, repotype1_.ts as ts2_5_1_, repotype1_.typename as typename3_5_1_, user2_.uid as uid1_0_2_, user2_.name as name2_0_2_, user2_.passwd as passwd3_0_2_, user2_.ts as ts4_0_2_ from public.repo repo0_ inner join public.repotype repotype1_ on repo0_.rtid=repotype1_.rtid inner join public.aimuser user2_ on repo0_.uid=user2_.uid where repo0_.rid=?
+2020-04-30 11:24:48.998 [http-nio-30019-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 11:24:49.007 [http-nio-30019-exec-3] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repoapps repoapp0_
+2020-04-30 11:37:07.113 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on f629b81412a8 with PID 26 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 11:37:07.133 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 11:37:12.058 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 11:37:12.534 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 441ms. Found 6 repository interfaces.
+2020-04-30 11:37:16.026 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84b0d2e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:37:16.179 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$4312017] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:37:19.686 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 11:37:19.759 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:37:19.821 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 11:37:19.823 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 11:37:19.863 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 11:37:20.245 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 11:37:20.246 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12729 ms
+2020-04-30 11:37:22.143 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 11:37:22.860 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 11:37:23.294 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 11:37:23.750 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 11:37:23.756 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 11:37:24.918 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 11:37:26.064 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 11:37:26.125 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 11:37:26.143 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7dc3712
+2020-04-30 11:37:28.872 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 11:37:28.897 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 11:37:28.922 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 11:37:28.945 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 11:37:28.969 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 11:37:28.985 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 11:37:28.994 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 11:37:29.007 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 11:37:29.010 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 11:37:29.023 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 11:37:29.025 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 11:37:29.038 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 11:37:29.040 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 11:37:29.221 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 11:37:29.227 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 11:37:29.236 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 11:37:29.242 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 11:37:29.248 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 11:37:29.254 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 11:37:29.260 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 11:37:29.268 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 11:37:29.276 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 11:37:29.283 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 11:37:29.295 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 11:37:35.097 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 11:37:35.339 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 11:37:36.067 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 11:37:37.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:37:37.390 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 11:37:37.466 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 11:37:37.476 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 32.119 seconds (JVM running for 35.174)
+2020-04-30 11:37:37.576 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 11:37:38.079 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:37:38.101 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:37:38.199 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.200 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:37:38.253 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:37:38.357 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:37:38.360 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588217858202]
+2020-04-30 11:37:38.360 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 11:37:38.361 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 11:37:38.375 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.376 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:37:38.379 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:37:38.383 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:37:38.383 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588217858378]
+2020-04-30 11:37:38.384 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 11:37:38.385 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 11:37:38.391 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.392 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:37:38.395 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:37:38.399 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:37:38.400 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588217858394]
+2020-04-30 11:37:38.400 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 11:37:38.400 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 11:37:38.411 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:37:38.412 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:37:38.417 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:37:38.418 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:37:38.422 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.423 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:37:38.438 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:37:38.444 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:37:38.445 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 11:37:38.446 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 11:37:38.446 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:37:38.447 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 11:37:38.448 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588217858429]
+2020-04-30 11:37:38.448 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:37:38.449 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 11:37:38.457 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:37:38.458 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:37:38.462 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:37:38.464 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:37:38.469 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.470 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:37:38.474 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:37:38.478 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:37:38.479 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 11:37:38.479 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 11:37:38.480 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:37:38.480 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 11:37:38.481 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588217858473]
+2020-04-30 11:37:38.482 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:37:38.482 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 11:37:38.488 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:37:38.489 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:37:38.494 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:37:38.495 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:37:38.500 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:37:38.501 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:37:38.504 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:37:38.508 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:37:38.509 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 11:37:38.510 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 11:37:38.511 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:37:38.512 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 11:37:38.513 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588217858503]
+2020-04-30 11:37:38.513 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:37:38.514 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]
+2020-04-30 11:45:01.208 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on 1e48922a8330 with PID 27 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 11:45:01.233 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 11:45:05.814 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 11:45:06.236 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 377ms. Found 6 repository interfaces.
+2020-04-30 11:45:10.083 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$618fd1b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:45:10.210 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$e1101eeb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:45:12.941 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 11:45:13.038 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:45:13.143 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 11:45:13.145 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 11:45:13.193 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 11:45:13.686 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 11:45:13.687 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12165 ms
+2020-04-30 11:45:15.522 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 11:45:16.097 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 11:45:16.692 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 11:45:17.171 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 11:45:17.182 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 11:45:18.198 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 11:45:19.429 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 11:45:19.504 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 11:45:19.524 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3bcd05cb
+2020-04-30 11:45:22.816 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 11:45:22.842 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 11:45:22.867 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 11:45:22.892 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 11:45:22.916 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 11:45:22.932 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 11:45:22.941 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 11:45:22.954 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 11:45:22.956 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 11:45:22.970 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 11:45:22.972 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 11:45:22.985 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 11:45:22.987 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 11:45:23.172 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 11:45:23.178 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 11:45:23.185 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 11:45:23.191 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 11:45:23.197 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 11:45:23.204 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 11:45:23.212 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 11:45:23.220 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 11:45:23.228 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 11:45:23.235 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 11:45:23.250 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 11:45:28.327 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 11:45:28.585 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 11:45:29.278 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 11:45:30.665 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:45:30.688 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 11:45:30.756 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 11:45:30.763 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 31.296 seconds (JVM running for 34.82)
+2020-04-30 11:45:30.851 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 11:45:31.344 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:45:31.364 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:45:31.450 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.452 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:45:31.506 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:45:31.594 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:45:31.597 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218331456]
+2020-04-30 11:45:31.598 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 11:45:31.600 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 11:45:31.617 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.618 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:45:31.621 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:45:31.626 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:45:31.629 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218331620]
+2020-04-30 11:45:31.630 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 11:45:31.631 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 11:45:31.637 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.639 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:45:31.643 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:45:31.647 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:45:31.649 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218331642]
+2020-04-30 11:45:31.650 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 11:45:31.651 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 11:45:31.663 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:45:31.665 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:45:31.670 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:45:31.672 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:45:31.678 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.679 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:45:31.692 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:45:31.698 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:45:31.699 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 11:45:31.700 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 11:45:31.700 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:45:31.701 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 11:45:31.702 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218331686]
+2020-04-30 11:45:31.703 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:45:31.703 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 11:45:31.711 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:45:31.712 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:45:31.717 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:45:31.718 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:45:31.723 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.724 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:45:31.728 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:45:31.732 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:45:31.733 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 11:45:31.734 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 11:45:31.734 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:45:31.735 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 11:45:31.735 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218331727]
+2020-04-30 11:45:31.736 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:45:31.737 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 11:45:31.744 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:45:31.745 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:45:31.749 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:45:31.750 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:45:31.755 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:45:31.756 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:45:31.760 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:45:31.764 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:45:31.765 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 11:45:31.766 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 11:45:31.766 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:45:31.766 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 11:45:31.767 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218331759]
+2020-04-30 11:45:31.768 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:45:31.768 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]
+2020-04-30 11:52:39.893 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on c2256687127a with PID 27 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 11:52:39.919 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 11:52:45.172 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 11:52:45.610 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 409ms. Found 6 repository interfaces.
+2020-04-30 11:52:49.408 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c1a73271] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:52:49.569 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$41277fa3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 11:52:52.243 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 11:52:52.303 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:52:52.351 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 11:52:52.352 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 11:52:52.392 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 11:52:52.646 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 11:52:52.647 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12233 ms
+2020-04-30 11:52:53.693 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 11:52:54.054 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 11:52:54.361 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 11:52:54.648 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 11:52:54.653 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 11:52:55.237 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 11:52:56.153 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 11:52:56.210 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 11:52:56.227 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3b35a229
+2020-04-30 11:52:58.890 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 11:52:58.918 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 11:52:58.945 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 11:52:58.975 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 11:52:59.003 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 11:52:59.020 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 11:52:59.029 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 11:52:59.042 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 11:52:59.045 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 11:52:59.059 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 11:52:59.062 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 11:52:59.077 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 11:52:59.079 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 11:52:59.254 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 11:52:59.260 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 11:52:59.267 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 11:52:59.273 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 11:52:59.279 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 11:52:59.284 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 11:52:59.290 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 11:52:59.298 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 11:52:59.307 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 11:52:59.314 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 11:52:59.328 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 11:53:04.319 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 11:53:04.573 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 11:53:05.256 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 11:53:06.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 11:53:06.388 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 11:53:06.465 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 11:53:06.473 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 28.383 seconds (JVM running for 31.543)
+2020-04-30 11:53:06.565 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 11:53:07.042 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:53:07.064 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:53:07.157 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.158 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:53:07.210 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:53:07.305 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:53:07.307 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218787161]
+2020-04-30 11:53:07.308 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 11:53:07.309 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 11:53:07.325 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.326 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:53:07.329 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:53:07.332 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:53:07.333 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218787328]
+2020-04-30 11:53:07.334 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 11:53:07.334 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 11:53:07.345 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.347 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:53:07.350 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 11:53:07.353 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 11:53:07.354 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588218787349]
+2020-04-30 11:53:07.355 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 11:53:07.355 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 11:53:07.368 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:53:07.369 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:53:07.374 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:53:07.376 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:53:07.381 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.382 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 11:53:07.398 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:53:07.403 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:53:07.404 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 11:53:07.405 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 11:53:07.405 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 11:53:07.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 11:53:07.406 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218787390]
+2020-04-30 11:53:07.407 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:53:07.407 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 11:53:07.416 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:53:07.417 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:53:07.421 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:53:07.422 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:53:07.427 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.427 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 11:53:07.431 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:53:07.434 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:53:07.435 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 11:53:07.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 11:53:07.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 11:53:07.436 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 11:53:07.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218787430]
+2020-04-30 11:53:07.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:53:07.437 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 11:53:07.450 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 11:53:07.452 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:53:07.456 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 11:53:07.457 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 11:53:07.462 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 11:53:07.463 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 11:53:07.467 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 11:53:07.471 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 11:53:07.471 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 11:53:07.472 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 11:53:07.472 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 11:53:07.473 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 11:53:07.474 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588218787466]
+2020-04-30 11:53:07.474 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 11:53:07.475 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]
+2020-04-30 13:23:03.730 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on efd31f2d1c88 with PID 26 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 13:23:03.744 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 13:23:08.248 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 13:23:08.756 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 470ms. Found 6 repository interfaces.
+2020-04-30 13:23:12.300 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc604311] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 13:23:12.418 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$5be09043] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 13:23:16.081 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 13:23:16.167 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 13:23:16.244 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 13:23:16.247 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 13:23:16.328 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 13:23:16.700 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 13:23:16.701 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12683 ms
+2020-04-30 13:23:18.301 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 13:23:18.710 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 13:23:19.156 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 13:23:19.625 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 13:23:19.642 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 13:23:20.722 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 13:23:22.012 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 13:23:22.077 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 13:23:22.096 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@78452606
+2020-04-30 13:23:25.236 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 13:23:25.262 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 13:23:25.287 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 13:23:25.312 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 13:23:25.337 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 13:23:25.352 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 13:23:25.362 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 13:23:25.374 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 13:23:25.376 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 13:23:25.390 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 13:23:25.393 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 13:23:25.406 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 13:23:25.408 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 13:23:25.579 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 13:23:25.584 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 13:23:25.589 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 13:23:25.594 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 13:23:25.599 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 13:23:25.604 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 13:23:25.611 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 13:23:25.617 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 13:23:25.623 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 13:23:25.629 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 13:23:25.642 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 13:23:30.709 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 13:23:30.953 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 13:23:31.605 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 13:23:32.778 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 13:23:32.795 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 13:23:32.861 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 13:23:32.869 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 31.066 seconds (JVM running for 35.002)
+2020-04-30 13:23:32.954 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 13:23:33.411 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:23:33.431 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:23:33.541 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.542 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 13:23:33.592 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:23:33.695 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:23:33.698 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588224213545]
+2020-04-30 13:23:33.699 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 13:23:33.700 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 13:23:33.714 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.715 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 13:23:33.719 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:23:33.722 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:23:33.723 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588224213718]
+2020-04-30 13:23:33.724 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 13:23:33.724 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 13:23:33.731 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.732 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 13:23:33.735 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:23:33.738 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:23:33.739 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588224213734]
+2020-04-30 13:23:33.740 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 13:23:33.741 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 13:23:33.752 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:23:33.753 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 13:23:33.758 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:23:33.759 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:23:33.763 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.764 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 13:23:33.779 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:23:33.785 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:23:33.786 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 13:23:33.787 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 13:23:33.787 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 13:23:33.788 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 13:23:33.789 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588224213771]
+2020-04-30 13:23:33.790 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:23:33.791 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 13:23:33.806 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:23:33.812 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 13:23:33.817 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:23:33.818 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:23:33.823 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.824 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 13:23:33.829 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:23:33.832 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:23:33.833 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 13:23:33.834 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 13:23:33.834 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 13:23:33.835 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 13:23:33.835 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588224213827]
+2020-04-30 13:23:33.836 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:23:33.836 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 13:23:33.842 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:23:33.843 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 13:23:33.848 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:23:33.848 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:23:33.853 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:23:33.854 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 13:23:33.858 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:23:33.861 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:23:33.862 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 13:23:33.862 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 13:23:33.862 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 13:23:33.863 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 13:23:33.863 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588224213857]
+2020-04-30 13:23:33.863 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:23:33.864 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]
+2020-04-30 13:29:39.601 [http-nio-30019-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-30 13:29:39.603 [http-nio-30019-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-30 13:29:39.667 [http-nio-30019-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 63 ms
+2020-04-30 13:29:44.548 [http-nio-30019-exec-7] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:29:44.553 [http-nio-30019-exec-7] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:29:44.603 [http-nio-30019-exec-7] INFO  com.m2m.management.controller.LoginController - admin
+2020-04-30 13:29:45.750 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame like ? order by repo0_.ts desc limit ?
+2020-04-30 13:29:45.750 [http-nio-30019-exec-9] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.filename like ? order by repoapp0_.ts desc limit ?
+2020-04-30 13:29:45.767 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:29:45.770 [http-nio-30019-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:29:45.792 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:45.794 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2020-04-30 13:29:45.808 [http-nio-30019-exec-9] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repoapps repoapp0_
+2020-04-30 13:29:45.826 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_0_, user0_.name as name2_0_0_, user0_.passwd as passwd3_0_0_, user0_.ts as ts4_0_0_ from public.aimuser user0_ where user0_.uid=?
+2020-04-30 13:29:45.827 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:29:45.835 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:45.849 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2020-04-30 13:29:45.867 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:45.869 [http-nio-30019-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:29:45.904 [http-nio-30019-exec-10] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repo repo0_
+2020-04-30 13:29:48.963 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select repobsp0_.rbid as rbid1_3_, repobsp0_.address as address2_3_, repobsp0_.boardname as boardnam3_3_, repobsp0_.description as descript4_3_, repobsp0_.rid as rid7_3_, repobsp0_.ts as ts5_3_, repobsp0_.versionname as versionn6_3_ from public.repobsps repobsp0_ where repobsp0_.boardname like ? order by repobsp0_.ts desc limit ?
+2020-04-30 13:29:48.965 [http-nio-30019-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:29:48.974 [http-nio-30019-exec-1] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repobsps repobsp0_
+2020-04-30 13:29:50.965 [http-nio-30019-exec-3] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.filename like ? order by repoapp0_.ts desc limit ?
+2020-04-30 13:29:50.969 [http-nio-30019-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:29:50.978 [http-nio-30019-exec-3] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repoapps repoapp0_
+2020-04-30 13:29:51.000 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame like ? order by repo0_.ts desc limit ?
+2020-04-30 13:29:51.003 [http-nio-30019-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:29:51.006 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:51.008 [http-nio-30019-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2020-04-30 13:29:51.011 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_0_, user0_.name as name2_0_0_, user0_.passwd as passwd3_0_0_, user0_.ts as ts4_0_0_ from public.aimuser user0_ where user0_.uid=?
+2020-04-30 13:29:51.013 [http-nio-30019-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:29:51.017 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:51.019 [http-nio-30019-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2020-04-30 13:29:51.023 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_0_, repotype0_.ts as ts2_5_0_, repotype0_.typename as typename3_5_0_ from public.repotype repotype0_ where repotype0_.rtid=?
+2020-04-30 13:29:51.024 [http-nio-30019-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:29:51.031 [http-nio-30019-exec-5] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repo repo0_
+2020-04-30 13:30:11.386 [http-nio-30019-exec-2] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.pkgname=? and repoapp0_.versionname=? and repoapp0_.filename=?
+2020-04-30 13:30:11.389 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 13:30:11.389 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 13:30:11.390 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 13:30:11.394 [http-nio-30019-exec-2] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.pkgname=? and repoapp0_.versionname=? and repoapp0_.filename=?
+2020-04-30 13:30:11.397 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 13:30:11.398 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 13:30:11.400 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 13:30:11.421 [http-nio-30019-exec-2] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_0_, repo0_.darkname as darkname2_1_0_, repo0_.description as descript3_1_0_, repo0_.reponame as reponame4_1_0_, repo0_.rtid as rtid6_1_0_, repo0_.ts as ts5_1_0_, repo0_.uid as uid7_1_0_, repotype1_.rtid as rtid1_5_1_, repotype1_.ts as ts2_5_1_, repotype1_.typename as typename3_5_1_, user2_.uid as uid1_0_2_, user2_.name as name2_0_2_, user2_.passwd as passwd3_0_2_, user2_.ts as ts4_0_2_ from public.repo repo0_ inner join public.repotype repotype1_ on repo0_.rtid=repotype1_.rtid inner join public.aimuser user2_ on repo0_.uid=user2_.uid where repo0_.rid=?
+2020-04-30 13:30:11.422 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:30:11.454 [http-nio-30019-exec-2] DEBUG org.hibernate.SQL - select nextval ('repoapps_raid_seq')
+2020-04-30 13:30:11.459 [http-nio-30019-exec-2] DEBUG org.hibernate.SQL - insert into public.repoapps (address, description, filename, license, pkgname, rid, summary, ts, versioncode, versionname, websit, raid) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:30:11.460 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [/DEPLOYREPO/a8340e5fbd10aa7727195fb239c0a902/com.advantech.edgeoncode/0.7.e63c493.20190920]
+2020-04-30 13:30:11.460 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [54def34]
+2020-04-30 13:30:11.461 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [EdgeOn-Code_v0.7.e63c493.20190920_release.apk]
+2020-04-30 13:30:11.461 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - []
+2020-04-30 13:30:11.461 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [com.advantech.edgeoncode]
+2020-04-30 13:30:11.462 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:30:11.462 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - []
+2020-04-30 13:30:11.462 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [8] as [BIGINT] - [1588224611443]
+2020-04-30 13:30:11.463 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [7]
+2020-04-30 13:30:11.463 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [0.7.e63c493.20190920]
+2020-04-30 13:30:11.464 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - []
+2020-04-30 13:30:11.464 [http-nio-30019-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [12] as [BIGINT] - [1]
+2020-04-30 13:30:13.046 [http-nio-30019-exec-4] DEBUG org.hibernate.SQL - select repoapp0_.raid as raid1_2_, repoapp0_.address as address2_2_, repoapp0_.description as descript3_2_, repoapp0_.filename as filename4_2_, repoapp0_.license as license5_2_, repoapp0_.pkgname as pkgname6_2_, repoapp0_.rid as rid12_2_, repoapp0_.summary as summary7_2_, repoapp0_.ts as ts8_2_, repoapp0_.versioncode as versionc9_2_, repoapp0_.versionname as version10_2_, repoapp0_.websit as websit11_2_ from public.repoapps repoapp0_ where repoapp0_.filename like ? order by repoapp0_.ts desc limit ?
+2020-04-30 13:30:13.048 [http-nio-30019-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%%]
+2020-04-30 13:30:13.052 [http-nio-30019-exec-4] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_0_, repo0_.darkname as darkname2_1_0_, repo0_.description as descript3_1_0_, repo0_.reponame as reponame4_1_0_, repo0_.rtid as rtid6_1_0_, repo0_.ts as ts5_1_0_, repo0_.uid as uid7_1_0_, repotype1_.rtid as rtid1_5_1_, repotype1_.ts as ts2_5_1_, repotype1_.typename as typename3_5_1_, user2_.uid as uid1_0_2_, user2_.name as name2_0_2_, user2_.passwd as passwd3_0_2_, user2_.ts as ts4_0_2_ from public.repo repo0_ inner join public.repotype repotype1_ on repo0_.rtid=repotype1_.rtid inner join public.aimuser user2_ on repo0_.uid=user2_.uid where repo0_.rid=?
+2020-04-30 13:30:13.053 [http-nio-30019-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2020-04-30 13:30:13.067 [http-nio-30019-exec-4] DEBUG org.hibernate.SQL - select count(*) as col_0_0_ from public.repoapps repoapp0_
+2020-04-30 13:56:03.215 [main] INFO  com.m2m.management.ManagementApplication - Starting ManagementApplication v0.0.1-SNAPSHOT on be4f24784e4b with PID 26 (/root/adv/astore.jar started by root in /root/adv)
+2020-04-30 13:56:03.230 [main] INFO  com.m2m.management.ManagementApplication - No active profile set, falling back to default profiles: default
+2020-04-30 13:56:07.231 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-30 13:56:07.592 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 329ms. Found 6 repository interfaces.
+2020-04-30 13:56:10.821 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90bc7f6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 13:56:10.955 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$103ccca1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-30 13:56:14.438 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 30019 (http)
+2020-04-30 13:56:14.514 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-30019"]
+2020-04-30 13:56:14.641 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-30 13:56:14.643 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-04-30 13:56:14.705 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-04-30 13:56:15.122 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-04-30 13:56:15.124 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 11630 ms
+2020-04-30 13:56:16.360 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-30 13:56:16.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-30 13:56:17.145 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-04-30 13:56:17.453 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2020-04-30 13:56:17.458 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-04-30 13:56:18.328 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-04-30 13:56:20.076 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-04-30 13:56:20.155 [main] INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-04-30 13:56:20.181 [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@311bf055
+2020-04-30 13:56:23.206 [main] DEBUG org.hibernate.SQL - create table public.repo (rid int8 not null, darkname varchar(255) not null, description varchar(32), reponame varchar(255) not null, ts int8, rtid int8 not null, uid int8 not null, primary key (rid))
+2020-04-30 13:56:23.232 [main] DEBUG org.hibernate.SQL - create table public.repoapps (raid int8 not null, address varchar(255), description varchar(255), filename varchar(255) not null, license varchar(255), pkgname varchar(255) not null, summary varchar(255), ts int8, versioncode varchar(255), versionname varchar(255) not null, websit varchar(255), rid int8, primary key (raid))
+2020-04-30 13:56:23.257 [main] DEBUG org.hibernate.SQL - create table public.repobsps (rbid int8 not null, address varchar(255) not null, boardname varchar(255) not null, description varchar(255), ts int8, versionname varchar(255) not null, rid int8, primary key (rbid))
+2020-04-30 13:56:23.281 [main] DEBUG org.hibernate.SQL - create table public.repofiles (rfid int8 not null, address varchar(255) not null, description varchar(255), filename varchar(255) not null, format varchar(255) not null, ts int8, type varchar(255) not null, rid int8, primary key (rfid))
+2020-04-30 13:56:23.306 [main] DEBUG org.hibernate.SQL - create table public.repotype (rtid int8 not null, ts int8, typename varchar(255) not null, primary key (rtid))
+2020-04-30 13:56:23.322 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_n6la5ee0xwcmqddhnrdsbydww
+2020-04-30 13:56:23.331 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_n6la5ee0xwcmqddhnrdsbydww unique (rtid)
+2020-04-30 13:56:23.344 [main] DEBUG org.hibernate.SQL - alter table public.repo drop constraint UK_c7k4ma4go27xfaq8cl7kymdbb
+2020-04-30 13:56:23.346 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint UK_c7k4ma4go27xfaq8cl7kymdbb unique (reponame)
+2020-04-30 13:56:23.359 [main] DEBUG org.hibernate.SQL - alter table public.repofiles drop constraint UK_2koj7o6t7wi1yhfdnh2yinsew
+2020-04-30 13:56:23.361 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint UK_2koj7o6t7wi1yhfdnh2yinsew unique (filename)
+2020-04-30 13:56:23.374 [main] DEBUG org.hibernate.SQL - alter table public.repotype drop constraint UK_fn3jidx15tvsu2wes1d6glf50
+2020-04-30 13:56:23.376 [main] DEBUG org.hibernate.SQL - alter table public.repotype add constraint UK_fn3jidx15tvsu2wes1d6glf50 unique (typename)
+2020-04-30 13:56:23.562 [main] DEBUG org.hibernate.SQL - create sequence repo_rid_seq start 1 increment 1
+2020-04-30 13:56:23.567 [main] DEBUG org.hibernate.SQL - create sequence repoapps_raid_seq start 1 increment 1
+2020-04-30 13:56:23.581 [main] DEBUG org.hibernate.SQL - create sequence repobsps_rbid_seq start 1 increment 1
+2020-04-30 13:56:23.601 [main] DEBUG org.hibernate.SQL - create sequence repofiles_rfid_seq start 1 increment 1
+2020-04-30 13:56:23.606 [main] DEBUG org.hibernate.SQL - create sequence repotype_rtid_seq start 1 increment 1
+2020-04-30 13:56:23.612 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FK5h1g0yvo38otvg2w5kic789le foreign key (rtid) references public.repotype
+2020-04-30 13:56:23.620 [main] DEBUG org.hibernate.SQL - alter table public.repo add constraint FKm3yt33inntf9p52sa188rjah5 foreign key (uid) references public.aimuser
+2020-04-30 13:56:23.627 [main] DEBUG org.hibernate.SQL - alter table public.repoapps add constraint FKlawcp6bfgipospt9iiyxddepv foreign key (rid) references public.repo
+2020-04-30 13:56:23.635 [main] DEBUG org.hibernate.SQL - alter table public.repobsps add constraint FK8nxi8v4mltp3lqmyiy66nyok3 foreign key (rid) references public.repo
+2020-04-30 13:56:23.641 [main] DEBUG org.hibernate.SQL - alter table public.repofiles add constraint FKks7igevovj1pdte88gluaoemm foreign key (rid) references public.repo
+2020-04-30 13:56:23.655 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-30 13:56:28.696 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 13:56:28.937 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-30 13:56:29.590 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [aStore/index.html]
+2020-04-30 13:56:30.784 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-30019"]
+2020-04-30 13:56:30.802 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-04-30 13:56:30.868 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 30019 (http) with context path ''
+2020-04-30 13:56:30.876 [main] INFO  com.m2m.management.ManagementApplication - Started ManagementApplication in 29.362 seconds (JVM running for 32.694)
+2020-04-30 13:56:30.968 [main] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-04-30 13:56:31.444 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:56:31.464 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:56:31.556 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.558 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 13:56:31.609 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:56:31.710 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:56:31.712 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588226191560]
+2020-04-30 13:56:31.713 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [appStore]
+2020-04-30 13:56:31.714 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [1]
+2020-04-30 13:56:31.729 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.731 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 13:56:31.734 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:56:31.737 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:56:31.738 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588226191733]
+2020-04-30 13:56:31.738 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [bspStore]
+2020-04-30 13:56:31.739 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [2]
+2020-04-30 13:56:31.745 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.746 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 13:56:31.750 [main] DEBUG org.hibernate.SQL - select nextval ('repotype_rtid_seq')
+2020-04-30 13:56:31.753 [main] DEBUG org.hibernate.SQL - insert into public.repotype (ts, typename, rtid) values (?, ?, ?)
+2020-04-30 13:56:31.753 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1588226191748]
+2020-04-30 13:56:31.754 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [fileStore]
+2020-04-30 13:56:31.754 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [BIGINT] - [3]
+2020-04-30 13:56:31.765 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:56:31.767 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidApp]
+2020-04-30 13:56:31.772 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:56:31.773 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:56:31.778 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.780 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [appStore]
+2020-04-30 13:56:31.793 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:56:31.798 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:56:31.799 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [a8340e5fbd10aa7727195fb239c0a902]
+2020-04-30 13:56:31.800 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidApp]
+2020-04-30 13:56:31.800 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidApp]
+2020-04-30 13:56:31.801 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [1]
+2020-04-30 13:56:31.801 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588226191786]
+2020-04-30 13:56:31.802 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:56:31.802 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [1]
+2020-04-30 13:56:31.810 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:56:31.811 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidBsp]
+2020-04-30 13:56:31.817 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:56:31.818 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:56:31.826 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.827 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [bspStore]
+2020-04-30 13:56:31.833 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:56:31.838 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:56:31.845 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [7a192df602c49951eb8b26ac3464752f]
+2020-04-30 13:56:31.846 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidBsp]
+2020-04-30 13:56:31.848 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidBsp]
+2020-04-30 13:56:31.849 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [2]
+2020-04-30 13:56:31.850 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588226191832]
+2020-04-30 13:56:31.851 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:56:31.852 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [2]
+2020-04-30 13:56:31.859 [main] DEBUG org.hibernate.SQL - select repo0_.rid as rid1_1_, repo0_.darkname as darkname2_1_, repo0_.description as descript3_1_, repo0_.reponame as reponame4_1_, repo0_.rtid as rtid6_1_, repo0_.ts as ts5_1_, repo0_.uid as uid7_1_ from public.repo repo0_ where repo0_.reponame=?
+2020-04-30 13:56:31.861 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [AndroidFile]
+2020-04-30 13:56:31.866 [main] DEBUG org.hibernate.SQL - select user0_.uid as uid1_0_, user0_.name as name2_0_, user0_.passwd as passwd3_0_, user0_.ts as ts4_0_ from public.aimuser user0_ where user0_.name=?
+2020-04-30 13:56:31.868 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [admin]
+2020-04-30 13:56:31.873 [main] DEBUG org.hibernate.SQL - select repotype0_.rtid as rtid1_5_, repotype0_.ts as ts2_5_, repotype0_.typename as typename3_5_ from public.repotype repotype0_ where repotype0_.typename=?
+2020-04-30 13:56:31.875 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [fileStore]
+2020-04-30 13:56:31.880 [main] DEBUG org.hibernate.SQL - select nextval ('repo_rid_seq')
+2020-04-30 13:56:31.884 [main] DEBUG org.hibernate.SQL - insert into public.repo (darkname, description, reponame, rtid, ts, uid, rid) values (?, ?, ?, ?, ?, ?, ?)
+2020-04-30 13:56:31.886 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [01c8794a94ad4d1eac4e7eaf191a1291]
+2020-04-30 13:56:31.888 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [store AndroidFile]
+2020-04-30 13:56:31.889 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [AndroidFile]
+2020-04-30 13:56:31.890 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [4] as [BIGINT] - [3]
+2020-04-30 13:56:31.891 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [5] as [BIGINT] - [1588226191879]
+2020-04-30 13:56:31.893 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [6] as [BIGINT] - [1]
+2020-04-30 13:56:31.894 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [7] as [BIGINT] - [3]

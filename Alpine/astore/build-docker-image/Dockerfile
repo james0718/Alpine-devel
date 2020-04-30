@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 MAINTAINER "advantech"<yao.kang@advantech.com.cn>
 RUN apk update && apk add --update-cache --no-cache apache2 \
-apache2-utils libxml2-dev bash busybox vim php
+apache2-utils libxml2-dev bash busybox php
 RUN echo "ServerName localhost" >> /etc/apache2/httpd.conf
 RUN rm -rf /var/www/html/* && mkdir -p /var/www/html
 RUN sed -ri "s/DocumentRoot \"\\/var\/www\/localhost\/htdocs/DocumentRoot \"\\/var\/www\/html/g" /etc/apache2/httpd.conf
