@@ -4,7 +4,7 @@ services:
         build: 
              context: ./java-env/build-docker-image/
              dockerfile: Dockerfile
-        image: java8env
+        image: java8env:v1.1
         restart: always
         depends_on:
                 - mqtt
@@ -28,7 +28,7 @@ services:
         build: 
              context: ./mosquitto/
              dockerfile: Dockerfile
-        image: m2m-mosquitto
+        image: m2m-mosquitto:v1.0
         restart: always
         ports: 
                 - "1883:1883"
@@ -51,7 +51,7 @@ services:
         build:
              context: ./astore/build-docker-image/
              dockerfile: Dockerfile  
-        image: aimlink-astore:v1.0
+        image: aimlink-astore:v1.1
         restart: always
         depends_on:
                 - db
